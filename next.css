@@ -1,0 +1,477 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial Black', Arial, sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background-color: #05050a;
+}
+
+/* =========================================================
+   PAGE WRAPPER
+   ========================================================= */
+
+.teams-page {
+    min-height: 100vh;
+    width: 100%;
+
+    padding: 40px 60px;
+
+    /* ===== BACKGROUND PHOTO SLOT ===== */
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.75)
+        ),
+        url("PHOTO\ 1\ LAPTOP.jpeg");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* =========================================================
+   TOP HEADING
+   ========================================================= */
+
+.teams-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.teams-title {
+    font-weight: 900;
+    letter-spacing: 3px;
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+
+.title-white {
+    display: block;
+    color: #f2f2f2;
+    font-size: 60px;
+}
+
+.title-orange {
+    display: block;
+    font-size: 80px;
+
+    background: linear-gradient(
+        180deg,
+        #ffd27a 0%,
+        #ff8c1a 60%,
+        #e85400 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.mini-icon {
+    font-size: 26px;
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   CARDS WRAP - 4 EQUAL COLUMNS
+   ========================================================= */
+
+.cards-wrap {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 24px;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   CARD BASE
+   ========================================================= */
+
+.team-card {
+    border-radius: 14px;
+
+    padding: 22px 18px;
+
+    min-height: 560px;
+
+    display: flex;
+    flex-direction: column;
+
+    /* Transparent card so background photo is visible */
+    background: rgba(10, 10, 15, 0.82);
+
+    border: 2px solid;
+
+    position: relative;
+
+    backdrop-filter: blur(4px);
+}
+
+
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
+
+.card-title {
+    text-align: center;
+
+    color: #fff;
+
+    font-size: 20px;
+
+    letter-spacing: 1px;
+
+    padding: 10px 0;
+
+    margin-bottom: 18px;
+
+    border-radius: 8px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TEAM LIST
+   ========================================================= */
+
+.team-list {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.team-list a {
+    color: inherit;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.team-list a:hover {
+    color: #007bff;
+
+    text-decoration: underline;
+}
+
+.team-list li {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #fff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    padding: 12px 14px;
+
+    border-radius: 6px;
+
+    border: 1px solid;
+
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.star {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CARD ICON
+   ========================================================= */
+
+.card-icon {
+    margin-top: auto;
+
+    text-align: center;
+
+    font-size: 30px;
+
+    opacity: 0.6;
+
+    padding-top: 20px;
+}
+
+
+/* =========================================================
+   BLUE CARD
+   ========================================================= */
+
+.blue-card {
+    border-color: #2196f3;
+
+    box-shadow:
+        0 0 20px rgba(33, 150, 243, 0.25);
+}
+
+.blue-card .card-title {
+    background:
+        linear-gradient(
+            90deg,
+            #1565c0,
+            #2196f3
+        );
+}
+
+.blue-card .team-list li {
+    border-color: #2196f3;
+
+    color: #cfe8ff;
+}
+
+.blue-card .star {
+    color: #ffb300;
+}
+
+
+/* =========================================================
+   GREEN CARD
+   ========================================================= */
+
+.green-card {
+    border-color: #4caf50;
+
+    box-shadow:
+        0 0 20px rgba(76, 175, 80, 0.25);
+}
+
+.green-card .card-title {
+    background:
+        linear-gradient(
+            90deg,
+            #2e7d32,
+            #4caf50
+        );
+}
+
+.green-card .team-list li {
+    border-color: #4caf50;
+
+    color: #d5f5d8;
+}
+
+.green-card .star {
+    color: #7cff7c;
+}
+
+
+/* =========================================================
+   PURPLE CARD
+   ========================================================= */
+
+.purple-card {
+    border-color: #9c27b0;
+
+    box-shadow:
+        0 0 20px rgba(156, 39, 176, 0.25);
+}
+
+.purple-card .card-title {
+    background:
+        linear-gradient(
+            90deg,
+            #6a1b9a,
+            #9c27b0
+        );
+}
+
+.purple-card .team-list li {
+    border-color: #9c27b0;
+
+    color: #f0d5f7;
+}
+
+.purple-card .star {
+    color: #e879f9;
+}
+
+
+/* =========================================================
+   ORANGE CARD
+   ========================================================= */
+
+.orange-card {
+    border-color: #ff6600;
+
+    box-shadow:
+        0 0 20px rgba(255, 102, 0, 0.25);
+}
+
+.orange-card .card-title {
+    background:
+        linear-gradient(
+            90deg,
+            #d84315,
+            #ff6600
+        );
+}
+
+.orange-card .team-list li {
+    border-color: #ff6600;
+
+    color: #ffe0cc;
+}
+
+.orange-card .star {
+    color: #ffb347;
+}
+
+
+/* =========================================================
+   LAPTOP SIZE
+   ========================================================= */
+
+@media (min-width: 1024px) {
+
+    .title-white {
+        font-size: 66px;
+    }
+
+    .title-orange {
+        font-size: 90px;
+    }
+
+    .teams-page {
+        padding: 40px 50px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .teams-page {
+        padding: 30px 20px;
+
+        background-attachment: scroll;
+    }
+
+    .title-white {
+        font-size: 42px;
+    }
+
+    .title-orange {
+        font-size: 54px;
+    }
+
+    .cards-wrap {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+    .team-card {
+        min-height: 500px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE / ANDROID SIZE FIX (768px kீழ)
+   2x2 grid - photo maadhiri exact match
+   ===================================================== */
+@media (max-width: 768px) {
+
+  .teams-page {
+    padding: 90px 14px 30px 14px;
+    background-image:
+        linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.9) 100%),
+        url("PHOTO\ 1\ ANDROID.jpeg");
+    background-size: cover;
+    background-position: center top;
+  }
+
+  .back-btn {
+    top: 18px;
+    left: 14px;
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+
+  /* Heading - chinna ah mobile ku */
+  .title-white  { font-size: 30px; letter-spacing: 1px; }
+  .title-orange { font-size: 42px; }
+  .teams-header { margin-bottom: 24px; }
+
+  /* ===== 2x2 GRID - main change idhு than ===== */
+  .cards-wrap {
+    grid-template-columns: repeat(2, 1fr);   /* 1 column illa, 2 columns - photo maadhiri */
+    gap: 12px;
+  }
+
+  /* Card size - chinna ah, ella 4 um same size */
+  .team-card {
+    min-height: 360px;
+    padding: 14px 10px;
+    border-radius: 10px;
+  }
+
+  .card-title {
+    font-size: 13px;
+    padding: 6px 0;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  .team-list {
+    gap: 6px;
+  }
+
+  .team-list li {
+    font-size: 10px;
+    padding: 8px 8px;
+    gap: 6px;
+  }
+
+  .star {
+    font-size: 10px;
+  }
+
+  .card-icon {
+    font-size: 20px;
+    padding-top: 10px;
+  }
+}
+
+/* Chinna phone screens (400px kீழ) - innum konjam chinna */
+@media (max-width: 400px) {
+  .title-white  { font-size: 24px; }
+  .title-orange { font-size: 34px; }
+
+  .team-card { min-height: 320px; }
+  .card-title { font-size: 11px; }
+  .team-list li { font-size: 9px; padding: 6px 6px; }
+}
